@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Reddit Mono", monospace;
+  background-color: #cefdff;
+  max-width: 600px;
+  margin: 0 auto;
+  min-width: 300px;
+}
+
+/* Navbar */
+nav {
+  background-color: whitesmoke;
+  padding: 1em 0.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 10px lightgrey;
+}
+
+.btn {
+  color: #00b7ff;
+  margin-right: 0.75em;
+}
+
+.title {
+  background-color: blue;
+  color: white;
+  border-radius: 50%;
+  padding: 0.5em;
+}
+
+#logout {
+  margin-left: 0.5em;
+  width: 30px;
+}
+
+/* Main */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card {
+  margin-top: 1.75em;
+  width: 80%;
+  background-color: #00b7ff;
+  color: whitesmoke;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75em 0.5em 0.5em;
+}
+
+.card-inner > div > h3 {
+  text-align: center;
+  text-shadow: 0 0 5px rgb(88, 135, 236);
+  font-size: 2.5rem;
+}
+.card-inner > div > h2 {
+  margin-left: 0.5em;
+  text-align: center;
+}
+.add-member-img {
+  width: 60px;
+  -webkit-filter: brightness(2.5);
+  -moz-filter: brightness(2.5);
+  -ms-filter: brightness(2.5);
+  filter: brightness(2.5);
+}
+
+.add-invoice-img {
+  width: 60px;
+}
+
+.dark {
+  text-align: center;
+  background-color: #00c3ff;
+  padding: 0.4em 0;
+}
+.dark > a {
+  color: white;
+  text-decoration: none;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+}
+
+.green {
+  background-color: #04a777;
+}
+.dark-green {
+  background-color: #0d7556;
+  padding: 0.4em 0;
+  text-align: center;
+}
+.dark-green > a {
+  color: white;
+  text-decoration: none;
+}

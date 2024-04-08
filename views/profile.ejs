@@ -12,29 +12,50 @@
       rel="stylesheet"
     />
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/profile.css" />
   </head>
   <body>
     <header>
       <nav>
-        <h3 class="title">JMK</h3>
-        <div>
+        <h1 class="title">JMK</h1>
+        <div class="flex">
+          <img id="logout" src="/images/logout.svg" alt="Logout" />
           <a class="btn" href="/logout">Logout</a>
         </div>
       </nav>
     </header>
     <main>
       <section id="member" class="card">
-        <h1>0</h1>
-        <h2>Customers</h2>
-        <div>
-          <img
-            class="add-member-img"
-            src="/images/add-member.svg"
-            alt="Add Member"
-          />
+        <div class="card-inner">
+          <div>
+            <h3>0</h3>
+            <h2>Customers</h2>
+          </div>
+          <div>
+            <img
+              class="add-member-img"
+              src="/images/add-member.svg"
+              alt="Add Member"
+            />
+          </div>
         </div>
-        <a href="#">More Info ➡️</a>
+        <div class="dark"><a href="#">More Info</a>➡️</div>
+      </section>
+
+      <section id="invoice" class="card green">
+        <div class="card-inner">
+          <div>
+            <h2>Make Invoice</h2>
+          </div>
+          <div>
+            <img
+              class="add-invoice-img"
+              src="/images/alternate-file.svg"
+              alt="Add Invoice"
+            />
+          </div>
+        </div>
+        <div class="dark-green"><a href="#">Make Invoice</a>➡️</div>
       </section>
     </main>
   </body>
