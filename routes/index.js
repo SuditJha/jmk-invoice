@@ -36,6 +36,11 @@ router.get('/profile', isLoggedIn, function (req, res, next) {
   res.render('profile')
 })
 
+// GET /Members Route
+router.get('/members', function (req, res, next) {
+  res.render('members')
+})
+
 // POST register route
 router.post('/register', function (req, res, next) {
   // Getting data

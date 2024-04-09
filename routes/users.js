@@ -17,3 +17,4 @@ userSchema.plugin(plm)
 const user = mongoose.model('user', userSchema)
 
 module.exports = user
+
