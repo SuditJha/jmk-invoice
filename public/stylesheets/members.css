@@ -37,6 +37,19 @@ nav {
   width: 30px;
 }
 
+/* Buttons / Links */
+
+.link-btn {
+  display: inline-block;
+  background-color: #0055ff;
+  color: antiquewhite;
+  padding: 0.5em;
+  box-sizing: border-box;
+  margin: 1em 0.5em;
+  border: 1px solid #00b7ff;
+  border-radius: 25px;
+}
+
 /* Utility */
 .flex {
   display: flex;

@@ -3,6 +3,7 @@ var router = express.Router();
 const passport = require('passport')
 const localStrategy = require('passport-local')
 const userModel = require('./users')
+const customerModel = require('./customers')
 passport.use(new localStrategy(userModel.authenticate()))
 
 /* GET home page. */
@@ -36,9 +37,19 @@ router.get('/profile', isLoggedIn, function (req, res, next) {
   res.render('profile')
 })
 
-// GET /Members Route
+// GET /Customer Route
 router.get('/members', function (req, res, next) {
   res.render('members')
+})
+
+// GET Add Customer Route
+router.get('/members/add', function (req, res, next) {
+  res.render('members-add')
+})
+
+// GET View Customer Route
+router.get('/members/view', function (req, res, next) {
+  res.render('members-view')
 })
 
 // POST register route
