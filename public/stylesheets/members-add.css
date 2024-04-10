@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Reddit Mono", monospace;
+  background-color: #cefdff;
+  max-width: 600px;
+  margin: 0 auto;
+  min-width: 300px;
+}
+
+/* Navbar */
+nav {
+  width: 100%;
+  background-color: whitesmoke;
+  padding: 1em 0.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 10px lightgrey;
+}
+
+.btn {
+  color: #00b7ff;
+  margin-right: 0.75em;
+}
+
+.title {
+  background-color: blue;
+  color: white;
+  border-radius: 50%;
+  padding: 0.5em;
+  font-size: 1.5rem;
+}
+
+#logout {
+  margin-right: 0.5em;
+  width: 30px;
+}
+
+/* Buttons / Links */
+
+.link-btn {
+  display: inline-block;
+  background-color: #0055ff;
+  color: antiquewhite;
+  padding: 0.5em;
+  box-sizing: border-box;
+  margin: 1em 0.5em;
+  border: 1px solid #00b7ff;
+  border-radius: 25px;
+}
+
+/* Form */
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  margin: 1em;
+  text-align: center;
+}
+
+form {
+  margin-top: 1.5em;
+  min-width: 300px;
+  max-width: 450px;
+  padding: 1.5em 1em;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px #00b7ff;
+}
+
+input {
+  box-shadow: 0 0 2px blue;
+  min-width: 220px;
+  max-width: 360px;
+  padding: 0.75em 0.5em;
+  margin-bottom: 1.25em;
+  border-radius: 10px;
+  border: none;
+}
+
+button {
+  min-width: 220px;
+  max-width: 360px;
+  padding: 0.75em 0.5em;
+  margin-bottom: 1.25em;
+  border-radius: 10px;
+  border: none;
+}
+
+.back {
+  display: inline-block;
+  margin: 2em;
+  padding: 0.5em 1.25em;
+  background-color: #0055ff;
+  color: aliceblue;
+  border-radius: 25px;
+}
+
+/* Utility */
+.flex {
+  display: flex;
+}

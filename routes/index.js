@@ -75,6 +75,20 @@ router.post('/login', passport.authenticate('local', {
   failureFlash: true
 }), function (req, res) { })
 
+
+// POST Add-Members ROute
+router.post('/members/add', async function (req, res, next) {
+  const { name, nickname, address, gst } = req.body
+  const customer = await customerModel.create({
+    name: name,
+    nickname: nickname,
+    address: address,
+    gst: gst
+  })
+
+  res.send(customer)
+})
+
 // Middleware Functions
 
 function isLoggedIn(req, res, next) {

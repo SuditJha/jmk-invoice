@@ -12,7 +12,7 @@
       rel="stylesheet"
     />
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="/stylesheets/members.css" />
+    <link rel="stylesheet" href="/stylesheets/members-add.css" />
   </head>
   <body>
     <header>
@@ -24,7 +24,44 @@
         </div>
       </nav>
     </header>
-    <main>Form Add Customer</main>
-    <a href="/members"> Go Back</a>
+    <main>
+      <h2>Fill Out The Customers Information</h2>
+      <form action="/members/add" method="post">
+        <input
+          type="text"
+          placeholder="Company Name"
+          name="name"
+          id="name"
+          class="input"
+        />
+
+        <input
+          type="text"
+          placeholder="NickName"
+          name="nickname"
+          id="nickname"
+          class="input"
+        />
+
+        <input
+          type="text"
+          placeholder="Address"
+          name="address"
+          id="address"
+          class="input"
+        />
+
+        <input
+          type="text"
+          placeholder="Buyer's GST"
+          name="gst"
+          id="gst"
+          class="gst"
+        />
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </form>
+    </main>
+    <a class="back" href="/members"> Go Back</a>
   </body>
 </html>
