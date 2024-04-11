@@ -33,22 +33,24 @@ router.get('/logout', function (req, res, next) {
 });
 
 // GET Profile route
-router.get('/profile', isLoggedIn, function (req, res, next) {
-  res.render('profile')
+router.get('/profile', isLoggedIn, async function (req, res, next) {
+  const user = await userModel.findOne({ username: req.session.passport.user })
+
+  res.render('profile', { user })
 })
 
 // GET /Customer Route
-router.get('/members', function (req, res, next) {
+router.get('/members', isLoggedIn, function (req, res, next) {
   res.render('members')
 })
 
 // GET Add Customer Route
-router.get('/members/add', function (req, res, next) {
+router.get('/members/add', isLoggedIn, function (req, res, next) {
   res.render('members-add')
 })
 
 // GET View Customer Route
-router.get('/members/view', function (req, res, next) {
+router.get('/members/view', isLoggedIn, function (req, res, next) {
   res.render('members-view')
 })
 
@@ -77,7 +79,7 @@ router.post('/login', passport.authenticate('local', {
 
 
 // POST Add-Members ROute
-router.post('/members/add', async function (req, res, next) {
+router.post('/members/add', isLoggedIn, async function (req, res, next) {
   const { name, nickname, address, gst } = req.body
   const customer = await customerModel.create({
     name: name,
@@ -85,8 +87,10 @@ router.post('/members/add', async function (req, res, next) {
     address: address,
     gst: gst
   })
-
-  res.send(customer)
+  const user = await userModel.findOne({ username: req.session.passport.user })
+  user.customers.push(customer._id)
+  await user.save()
+  res.send("Customer Created")
 })
 
 // Middleware Functions
